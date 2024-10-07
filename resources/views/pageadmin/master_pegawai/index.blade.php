@@ -10,26 +10,23 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0 p-0">
                         <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Master Mahasiswa</li>
+                        <li class="breadcrumb-item active" aria-current="page">Master Pegawai</li>
                     </ol>
                 </nav>
             </div>
         </div>
         <!--breadcrumb-->
-        <h6 class="mb-0 text-uppercase">Data Master Mahasiswa</h6>
+        <h6 class="mb-0 text-uppercase">Data Master Pegawai</h6>
         <hr/>
         <div class="card">
             <div class="card-body">
-                <a href="{{ route('mahasiswa.create') }}" class="btn btn-primary mb-3">Tambah Data</a>
+                <a href="{{ route('pegawai.create') }}" class="btn btn-primary mb-3">Tambah Data</a>
                 <div class="table-responsive">
                     <table id="example2" class="table table-striped table-bordered">
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Nama Mahasiswa</th>
-                                <th>NIM</th>
-                                <th>Prodi</th>
-                                <th>Fakultas</th>
+                                <th>Nama Pegawai</th>
                                 <th>Alamat</th>
                                 <th>Telepon</th>
                                 <th>Email</th>
@@ -37,19 +34,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($mahasiswa as $index => $p)
+                            @foreach($pegawai as $index => $p)
                             <tr>
                                 <td>{{ $index + 1 }}</td>
                                 <td>{{ $p->nama }}</td>
-                                <td>{{ $p->nim }}</td>
-                                <td>{{ $p->prodi }}</td>
-                                <td>{{ $p->fakultas }}</td>
                                 <td>{{ $p->alamat }}</td>
                                 <td>{{ $p->telepon }}</td>
                                 <td>{{ $p->user->email }}</td>
                                 <td>
-                                    <a href="{{ route('mahasiswa.edit', $p->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                                    <form action="{{ route('mahasiswa.destroy', $p->id) }}" method="POST" style="display:inline;" class="delete-form">
+                                    <a href="{{ route('pegawai.edit', $p->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                    <form action="{{ route('pegawai.destroy', $p->id) }}" method="POST" style="display:inline;" class="delete-form">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
@@ -61,10 +55,7 @@
                         <tfoot>
                             <tr>
                                 <th>No</th>
-                                <th>Nama Mahasiswa</th>
-                                <th>NIM</th>
-                                <th>Prodi</th>
-                                <th>Fakultas</th>
+                                <th>Nama Pegawai</th>
                                 <th>Alamat</th>
                                 <th>Telepon</th>
                                 <th>Email</th>
