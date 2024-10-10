@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="{{ asset('admin') }}/assets/css/semi-dark.css"/>
 	<link rel="stylesheet" href="{{ asset('admin') }}/assets/css/header-colors.css"/>
     @yield('style')
-	<title>Dashboard - E-Commerce</title>
+	<title>Dashboard - E-Shop</title>
 </head>
 
 <body>
@@ -39,7 +39,7 @@
 					<img src="{{ asset('env') }}/ecommerce.png" class="logo-icon" alt="logo icon">
 				</div>
 				<div>
-					<h4 class="logo-text">E-Commerce</h4>
+					<h4 class="logo-text">E-Shop</h4>
 				</div>
 				<div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
 				</div>
@@ -340,7 +340,7 @@
 					</div>
 					<div class="user-box dropdown">
 						<a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="{{ asset('env') }}/eccomerce.png" class="user-img" alt="user avatar">
+							<img src="{{ asset('env') }}/ecommerce.png" class="user-img" alt="user avatar">
 						
 							<div class="user-info ps-3">
 								@auth

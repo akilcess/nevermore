@@ -25,6 +25,18 @@
                 <div class="menu-title">PEGAWAI</div>
             </a>
         </li>
+        <li>
+            <a href="/master-jenisbarang">
+                <div class="parent-icon"><i class='bx bxs-purchase-tag'></i></div>
+                <div class="menu-title">JENIS BARANG</div>
+            </a>
+        </li>
+        <li>
+            <a href="/master-barang">
+                <div class="parent-icon"><i class='bx bx-closet' ></i></div>
+                <div class="menu-title">BARANG</div>
+            </a>
+        </li>
     @endif
 
     @if (Auth::user()->role == 'pegawai')

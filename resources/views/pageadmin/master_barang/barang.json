@@ -1,0 +1,16 @@
+[
+    {
+        "opsi": "warna",
+        "subopsi": [
+            "hijau",
+            "biru"
+        ]
+    },
+    {
+        "opsi": "ukuran",
+        "subopsi": [
+            "xl",
+            "l"
+        ]
+    }
+]

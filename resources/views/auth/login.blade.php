@@ -20,7 +20,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 	<link href="{{ asset('admin') }}/assets/css/app.css" rel="stylesheet">
 	<link href="{{ asset('admin') }}/assets/css/icons.css" rel="stylesheet">
-	<title>Login - E-Commerce</title>
+	<title>Login - E-Shop</title>
 </head>
 
 <body class="bg-login">
@@ -37,8 +37,8 @@
 							<div class="card-body">
 								<div class="border p-4 rounded">
 									<div class="text-center">
-										<h3 class="">E-Commerce</h3>
-										<p>E-Commerce
+										<h3 class="">E-Shop</h3>
+										<p>E-Shop
 										</p>
 									</div>
 								
