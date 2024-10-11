@@ -33,6 +33,11 @@
                                 <label for="nama" class="form-label">Nama Jenis Barang</label>
                                 <input type="text" class="form-control" id="nama" name="nama" required>
                             </div>
+                             <!-- Deskripsi -->
+                             <div class="col-md-12">
+                                <label for="deskripsi" class="form-label">Deskripsi</label>
+                                <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" required></textarea>
+                            </div>
                             
 
                             <div class="col-12">

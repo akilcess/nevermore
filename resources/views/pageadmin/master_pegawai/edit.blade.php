@@ -54,6 +54,10 @@
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" name="email" value="{{ old('email', $user->email) }}" required>
                             </div>
+                            <div class="col-md-6">
+                                <label for="status" class="form-label">Status</label>
+                                <input type="status" class="form-control" id="status" name="status" value="{{ old('status', $pegawai->status) }}" required>
+                            </div>
                             <div class="col-12">
                                 <label for="alamat" class="form-label">Alamat Pegawai</label>
                                 <textarea class="form-control" id="alamat" name="alamat" rows="3" required>{{ old('alamat', $pegawai->alamat) }}</textarea>

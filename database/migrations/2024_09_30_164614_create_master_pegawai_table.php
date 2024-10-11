@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('alamat');
             $table->string('telepon');
             $table->string('profil')->nullable();
+            $table->string('status');
             $table->foreignId('user_id');
             $table->timestamps();
         });

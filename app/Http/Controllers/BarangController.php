@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Barang;
 use App\Models\JenisBarang;
+use App\Models\MerkBarang;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Routing\Controller;
@@ -15,7 +16,7 @@ class BarangController extends Controller
      */
     public function index()
     {
-        $barangs = Barang::with('jenisBarang')->get(); // Fetch all barang with related jenisBarang
+        $barangs = Barang::with('jenisBarang','merkBarang')->get(); // Fetch all barang with related jenisBarang
         return view('pageadmin.master_barang.index', compact('barangs'));
     }
 
@@ -25,7 +26,8 @@ class BarangController extends Controller
     public function create()
     {
         $jenisBarangs = JenisBarang::all(); // Fetch all jenis barangs for select option
-        return view('pageadmin.master_barang.create', compact('jenisBarangs'));
+        $merkBarangs = MerkBarang::all(); // Fetch all MerkBarang barangs for select option
+        return view('pageadmin.master_barang.create', compact('jenisBarangs','merkBarangs'));
     }
 
     /**
@@ -37,14 +39,17 @@ class BarangController extends Controller
         $request->validate([
             'nama' => 'required|string|max:255',
             'deskripsi' => 'required|string',
-            'jenis_barang_id' => 'required|exists:jenis_barangs,id',
-            'harga' => 'required|integer',
-            'gambar.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Validasi gambar
+            'jenis_barang_id' => 'required',
+            'merk_barang_id' => 'required',
+            'harga_modal' => 'required|integer',
+            'harga_jual' => 'required|integer',
+            'gambar.*' => 'image|mimes:jpeg,png,jpg,gif', // Validasi gambar
             'opsi' => 'required|array', // Validasi opsi sebagai array
             'opsi.*' => 'string|max:255', // Validasi setiap opsi
             'subopsi.*' => 'array', // Validasi subopsi sebagai array
             'subopsi.*.*' => 'string|max:255', // Validasi setiap subopsi
             'stok' => 'required|string',
+            'berat' => 'required|string',
 
         ]);
 
@@ -72,10 +77,13 @@ class BarangController extends Controller
             'nama' => $request->nama,
             'deskripsi' => $request->deskripsi,
             'jenis_barang_id' => $request->jenis_barang_id,
-            'harga' => $request->harga,
+            'merk_barang_id' => $request->merk_barang_id,
+            'harga_modal' => $request->harga_modal,
+            'harga_jual' => $request->harga_jual,
             'gambar' => $gambarPaths, // Simpan path gambar sebagai array
             'opsi_barang' => $opsiBarang, // Simpan opsi dan sub opsi sebagai array
             'stok' => $request->stok, // Simpan opsi dan sub opsi sebagai array
+            'berat' => $request->berat,
         ]);
 
         // Tampilkan notifikasi sukses
@@ -90,9 +98,11 @@ class BarangController extends Controller
         // Find the barang by ID
         $barang = Barang::findOrFail($id);
         $jenisBarangs = JenisBarang::all(); // Assuming you have a model for Jenis Barang
+        $merkBarangs = MerkBarang::all(); // Fetch all MerkBarang barangs for select option
+
 
         // Pass the existing data to the view
-        return view('pageadmin.master_barang.edit', compact('barang', 'jenisBarangs'));
+        return view('pageadmin.master_barang.edit', compact('barang', 'jenisBarangs','merkBarangs'));
     }
 
     public function update(Request $request, $id)
@@ -101,14 +111,17 @@ class BarangController extends Controller
         $request->validate([
             'nama' => 'required|string|max:255',
             'deskripsi' => 'required|string',
-            'jenis_barang_id' => 'required|exists:jenis_barangs,id',
-            'harga' => 'required|integer',
-            'gambar.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'jenis_barang_id' => 'required',
+            'merk_barang_id' => 'required',
+            'harga_modal' => 'required|integer',
+            'harga_modal' => 'required|integer',
+            'gambar.*' => 'image|mimes:jpeg,png,jpg,gif',
             'opsi' => 'required|array',
             'opsi.*' => 'string|max:255',
             'subopsi.*' => 'array',
             'subopsi.*.*' => 'string|max:255',
             'stok' => 'required|string',
+            'berat' => 'required|string',
 
         ]);
 
@@ -139,10 +152,13 @@ class BarangController extends Controller
             'nama' => $request->nama,
             'deskripsi' => $request->deskripsi,
             'jenis_barang_id' => $request->jenis_barang_id,
-            'harga' => $request->harga,
+            'merk_barang_id' => $request->merk_barang_id,
+            'harga_modal' => $request->harga_modal,
+            'harga_jual' => $request->harga_jual,
             'gambar' => $gambarPaths,
             'opsi_barang' => $opsiBarang,
             'stok' => $request->stok,
+            'berat' => $request->berat,
         ]);
 
         // Show success message and redirect

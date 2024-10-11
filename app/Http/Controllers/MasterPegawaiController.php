@@ -31,6 +31,7 @@ class MasterPegawaiController extends Controller
             'alamat' => 'required|string',
             'telepon' => 'required|string|max:255',
             'profil' => 'nullable|image|mimes:jpeg,png,jpg|max:2048', // Validate image file
+            'status' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
             'username' => 'required|string|max:255',
             'password' => 'required|string|confirmed|min:6',
@@ -59,6 +60,7 @@ class MasterPegawaiController extends Controller
             'alamat' => $request->alamat,
             'telepon' => $request->telepon,
             'profil' => $profilPath, // Store the path of the uploaded profile
+            'status' => $request->status,
             'user_id' => $user->id,
         ]);
 
@@ -83,6 +85,7 @@ class MasterPegawaiController extends Controller
             'alamat' => 'required|string',
             'telepon' => 'required|string|max:255',
             'profil' => 'nullable|image|mimes:jpeg,png,jpg|max:2048', // Validate image file
+            'status' => 'required|string|max:255',
             'email' => 'nullable|email',
             'username' => 'nullable|string|max:255',
             'password' => 'nullable|string|confirmed|min:6',
@@ -113,6 +116,7 @@ class MasterPegawaiController extends Controller
             'alamat' => $request->alamat,
             'telepon' => $request->telepon,
             'profil' => $profilPath, // Update with new file path if uploaded
+            'status' => $request->telepon,
         ]);
 
         // Update User

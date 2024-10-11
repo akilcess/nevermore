@@ -12,10 +12,13 @@ class Barang extends Model
         'nama',         // Item name
         'deskripsi',    // Item description
         'jenis_barang_id', // Foreign key to jenis barang
-        'harga',        // Item price
+        'merk_barang_id', // Foreign key to merk barang
+        'harga_modal',        // Item price
+        'harga_jual',        // Item price
         'gambar',       // Array of image paths
         'opsi_barang',       // Array
         'stok',       // Array
+        'berat',     
     ];
 
     /**
@@ -34,5 +37,9 @@ class Barang extends Model
     public function jenisBarang()
     {
         return $this->belongsTo(JenisBarang::class);
+    }
+    public function merkBarang()
+    {
+        return $this->belongsTo(MerkBarang::class);
     }
 }

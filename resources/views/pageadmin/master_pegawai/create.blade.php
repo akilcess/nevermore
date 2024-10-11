@@ -41,6 +41,10 @@
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
                             </div>
+                            <div class="col-md-6">
+                                <label for="status" class="form-label">Status</label>
+                                <input type="text" class="form-control" id="status" name="status" required>
+                            </div>
                             <div class="col-12">
                                 <label for="alamat" class="form-label">Alamat Pegawai</label>
                                 <textarea class="form-control" id="alamat" name="alamat" rows="3" required></textarea>

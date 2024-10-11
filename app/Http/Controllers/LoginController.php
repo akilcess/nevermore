@@ -37,7 +37,7 @@ class LoginController extends Controller
             if ($user->role == 'admin') {
                 Alert::success('Login Successful', 'Welcome back, Admin!');
                 return redirect()->route('admin.dashboard');
-            } elseif ($user->role == 'pegwawai') {
+            } elseif ($user->role == 'pegawai') {
                 Alert::success('Login Successful', 'Welcome back!');
                 return redirect()->route('pegawai.dashboard');
             } else {

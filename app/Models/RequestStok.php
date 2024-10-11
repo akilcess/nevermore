@@ -5,19 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class MasterPegawai extends Model
+class RequestStok extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'nama',
-        'alamat',
-        'telepon',
-        'profil',
+        'barang_id',
+        'stok_awal',
+        'request_stok',
         'status',
-        'user_id'
     ];
-    public function user()
+
+    public function barang()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Barang::class);
     }
 }

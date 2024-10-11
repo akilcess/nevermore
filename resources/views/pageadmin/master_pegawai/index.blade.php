@@ -27,6 +27,7 @@
                             <tr>
                                 <th>No</th>
                                 <th>Nama Pegawai</th>
+                                <th>Status Pegawai</th>
                                 <th>Alamat</th>
                                 <th>Telepon</th>
                                 <th>Email</th>
@@ -38,6 +39,7 @@
                             <tr>
                                 <td>{{ $index + 1 }}</td>
                                 <td>{{ $p->nama }}</td>
+                                <td>{{ $p->status }}</td>
                                 <td>{{ $p->alamat }}</td>
                                 <td>{{ $p->telepon }}</td>
                                 <td>{{ $p->user->email }}</td>
@@ -56,6 +58,7 @@
                             <tr>
                                 <th>No</th>
                                 <th>Nama Pegawai</th>
+                                <th>Status Pegawai</th>
                                 <th>Alamat</th>
                                 <th>Telepon</th>
                                 <th>Email</th>

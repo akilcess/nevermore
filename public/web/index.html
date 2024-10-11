@@ -1,0 +1,330 @@
+<html>
+
+<head>
+    <title>
+        Preloved
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        /* Custom styles for the sidebar */
+        .sidebar {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sidebar-open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                PRELOVED
+            </div>
+            <div class="flex items-center space-x-4">
+                <input class="border rounded px-4 py-2" placeholder="Nike" type="text" />
+                <button class="border rounded px-4 py-2 hidden md:block">
+                    Login
+                </button>
+                <button class="border rounded px-4 py-2 bg-black text-white hidden md:block">
+                    Sign up
+                </button>
+                <button class="md:hidden" id="menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="hidden md:flex justify-center space-x-4 py-4 bg-white shadow">
+            <a class="text-gray-700" href="#">
+                Wanita
+            </a>
+            <a class="text-gray-700" href="#">
+                Pria
+            </a>
+            <a class="text-gray-700" href="#">
+                Branded
+            </a>
+            <a class="text-gray-700" href="#">
+                Anak
+            </a>
+        </div>
+    </header>
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden" id="overlay"></div>
+    <div class="fixed inset-y-0 left-0 bg-white w-64 p-4 z-50 sidebar" id="sidebar">
+        <div class="flex justify-between items-center mb-4">
+            <div class="text-2xl font-bold">
+                PRELOVED
+            </div>
+            <button id="close-button">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col space-y-4">
+            <a class="text-gray-700" href="#">
+                Wanita
+            </a>
+            <a class="text-gray-700" href="#">
+                Pria
+            </a>
+            <a class="text-gray-700" href="#">
+                Branded
+            </a>
+            <a class="text-gray-700" href="#">
+                Anak
+            </a>
+            <input class="border rounded px-4 py-2" placeholder="Nike" type="text" />
+            <button class="border rounded px-4 py-2">
+                Login
+            </button>
+            <button class="border rounded px-4 py-2 bg-black text-white">
+                Sign up
+            </button>
+        </nav>
+    </div>
+    <main class="container mx-auto px-4 py-8">
+        <section class="bg-black text-white p-8 rounded-lg mb-8">
+            <h1 class="text-4xl font-bold mb-4">
+                Jual-Beli baju preloved dan thrift
+            </h1>
+            <div class="flex space-x-4">
+                <button class="bg-white text-black px-4 py-2 rounded">
+                    Mulai berjualan
+                </button>
+                <a class="underline" href="#">
+                    Cara lengkap
+                </a>
+            </div>
+        </section>
+        <section class="mb-8">
+            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                <div class="bg-white p-4 rounded-lg flex-1">
+                    <h2 class="text-xl font-bold mb-2">
+                        Lihat item popular
+                    </h2>
+                    <button class="bg-gray-200 px-4 py-2 rounded">
+                        Shop now
+                    </button>
+                </div>
+                <div class="bg-black text-white p-4 rounded-lg flex-1">
+                    <h2 class="text-xl font-bold mb-2">
+                        Explore item terbaru
+                    </h2>
+                    <button class="bg-white text-black px-4 py-2 rounded">
+                        Shop now
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold">
+                    Hot Items
+                </h2>
+                <a class="text-blue-500" href="#">
+                    See all
+                </a>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="bg-white p-4 rounded-lg">
+                    <img alt="Item 1" class="mb-2" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/zxgkQJOBNE4pAdmbxVVpdtGWxxEO5Tb3dfZQ2UEOdvTo7tyJA.jpg"
+                        width="150" />
+                    <p class="text-lg font-bold">
+                        Rp 100.000
+                    </p>
+                    <p class="text-gray-500">
+                        Vintage
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <img alt="Item 2" class="mb-2" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/MiUJgDUxfV1seEgAufXE6uwBdsEJnJc6XiHqBkcbgC1xu3KnA.jpg"
+                        width="150" />
+                    <p class="text-lg font-bold">
+                        Rp 200.000
+                    </p>
+                    <p class="text-gray-500">
+                        D&amp;G
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <img alt="Item 3" class="mb-2" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/QsC8STiWiA7mPhel29ufvmGie6GbIzJJ9efNag1JoorX7eW5E.jpg"
+                        width="150" />
+                    <p class="text-lg font-bold">
+                        Rp 150.000
+                    </p>
+                    <p class="text-gray-500">
+                        Vintage
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <img alt="Item 4" class="mb-2" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/thsvGYsHXXJ6KtkmW9B3USbkefQCNdsIaBFpsMhkdDaS3blTA.jpg"
+                        width="150" />
+                    <p class="text-lg font-bold">
+                        Rp 150.000
+                    </p>
+                    <p class="text-gray-500">
+                        Vintage
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <img alt="Item 5" class="mb-2" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/UuHzJp4sLErjLV513RkzuWVvExZcMvRdOiU7IuSezJko7tyJA.jpg"
+                        width="150" />
+                    <p class="text-lg font-bold">
+                        Rp 300.000
+                    </p>
+                    <p class="text-gray-500">
+                        Levi's
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <img alt="Item 6" class="mb-2" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/I7SZHyjGya6uMJR6TECois49xx54NH5vdbnkFfPCheCfu3KnA.jpg"
+                        width="150" />
+                    <p class="text-lg font-bold">
+                        Rp 200.000
+                    </p>
+                    <p class="text-gray-500">
+                        Ck
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <img alt="Item 7" class="mb-2" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/dDTehcxfHJsAHkffxbro25WwQg8i9TThHyQCYQwKWTPXdvVOB.jpg"
+                        width="150" />
+                    <p class="text-lg font-bold">
+                        Rp 400.000
+                    </p>
+                    <p class="text-gray-500">
+                        One size
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <img alt="Item 8" class="mb-2" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/P4SxiXPQpw6rLlWFVEUoUwFocaOPC5hhdmiuwvNcmAeu7tyJA.jpg"
+                        width="150" />
+                    <p class="text-lg font-bold">
+                        Rp 80.000
+                    </p>
+                    <p class="text-gray-500">
+                        Vintage
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <img alt="Item 9" class="mb-2" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/hJmQ08vIE7pbFRQgKLrbWPOS48ljGOoPSb0FbdJf0kVq7tyJA.jpg"
+                        width="150" />
+                    <p class="text-lg font-bold">
+                        Rp 300.000
+                    </p>
+                    <p class="text-gray-500">
+                        Kappa
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <img alt="Item 10" class="mb-2" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/uEZUISraKlY7JZhOi9wXfUvrOSA3Fr7UABtPwYKPsQVw7tyJA.jpg"
+                        width="150" />
+                    <p class="text-lg font-bold">
+                        Rp 350.000
+                    </p>
+                    <p class="text-gray-500">
+                        Vintage
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <img alt="Item 11" class="mb-2" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/P6jV1gf1hPyhFa0yNQL7N7mX7hwC2TqtRsTnqn7Mjz7r7tyJA.jpg"
+                        width="150" />
+                    <p class="text-lg font-bold">
+                        Rp 70.000
+                    </p>
+                    <p class="text-gray-500">
+                        Vintage
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <img alt="Item 12" class="mb-2" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/DwxLPOG66TY9JhQVbdmZTWXNpz1GvBg9N88wAqrYO4et7tyJA.jpg"
+                        width="150" />
+                    <p class="text-lg font-bold">
+                        Rp 200.000
+                    </p>
+                    <p class="text-gray-500">
+                        One size
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">
+                Belanja sesual budget
+            </h2>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded-lg text-center">
+                    <p class="text-lg font-bold">
+                        dibawah
+                    </p>
+                    <p class="text-2xl font-bold">
+                        100 Rb
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg text-center">
+                    <p class="text-lg font-bold">
+                        dibawah
+                    </p>
+                    <p class="text-2xl font-bold">
+                        250 Rb
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg text-center">
+                    <p class="text-lg font-bold">
+                        dibawah
+                    </p>
+                    <p class="text-2xl font-bold">
+                        500 Rb
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-lg text-center">
+                    <p class="text-lg font-bold">
+                        dibawah
+                    </p>
+                    <p class="text-2xl font-bold">
+                        1 Juta
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const closeButton = document.getElementById('close-button');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        menuButton.addEventListener('click', () => {
+            sidebar.classList.add('sidebar-open');
+            overlay.classList.remove('hidden');
+        });
+
+        closeButton.addEventListener('click', () => {
+            sidebar.classList.remove('sidebar-open');
+            overlay.classList.add('hidden');
+        });
+
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('sidebar-open');
+            overlay.classList.add('hidden');
+        });
+    </script>
+</body>
+
+</html>

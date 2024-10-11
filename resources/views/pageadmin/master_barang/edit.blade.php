@@ -65,6 +65,19 @@
                                         @endforeach
                                     </select>
                                 </div>
+                                <!-- merk Barang -->
+                                <div class="col-md-12">
+                                    <label for="merk_barang_id" class="form-label">Merk Barang</label>
+                                    <select class="form-control" id="merk_barang_id" name="merk_barang_id" required>
+                                        <option value="">Pilih Merk Barang</option>
+                                        @foreach ($merkBarangs as $merk)
+                                            <option value="{{ $merk->id }}"
+                                                {{ $barang->merk_barang_id == $merk->id ? 'selected' : '' }}>
+                                                {{ $merk->nama }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
 
                                 <!-- Deskripsi -->
                                 <div class="col-md-12">
@@ -74,15 +87,27 @@
 
                                 <!-- Harga -->
                                 <div class="col-md-6">
-                                    <label for="harga" class="form-label">Harga</label>
-                                    <input type="number" class="form-control" id="harga" name="harga"
-                                        value="{{ $barang->harga }}" required>
+                                    <label for="harga_modal" class="form-label">Harga Modal</label>
+                                    <input type="number" class="form-control" id="harga_modal" name="harga_modal"
+                                        value="{{ $barang->harga_modal }}" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="harga_jual" class="form-label">Harga Jual</label>
+                                    <input type="number" class="form-control" id="harga_jual" name="harga_jual"
+                                        value="{{ $barang->harga_jual }}" required>
                                 </div>
                                 <!-- stok -->
                                 <div class="col-md-6">
                                     <label for="stok" class="form-label">Stok</label>
                                     <input type="number" class="form-control" id="stok" name="stok"
                                         value="{{ $barang->stok }}" required>
+                                </div>
+                                <!-- berat -->
+                                <div class="col-md-6">
+                                    <label for="berat" class="form-label">Berat</label>
+                                    <span class="text-danger">*satuan kilo (jika 500gram gunakan 0.5)</span>
+                                    <input type="number" class="form-control" id="berat" name="berat" step="0.01" min="0" 
+                                        value="{{ $barang->berat }}" required>
                                 </div>
 
                                 <hr>

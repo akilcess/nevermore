@@ -16,10 +16,13 @@ return new class extends Migration
             $table->string('nama');  // Item name
             $table->text('deskripsi');  // Item description
             $table->foreignId('jenis_barang_id');  // Delete barang when jenis_barang is deleted
-            $table->integer('harga'); // Item price
+            $table->foreignId('merk_barang_id');  // Delete barang when jenis_barang is deleted
+            $table->integer('harga_modal'); // Item price
+            $table->integer('harga_jual'); // Item price
             $table->json('gambar'); // Store multiple images as an array (in JSON)
             $table->json('opsi_barang')->nullable(); // Store multiple images as an array (in JSON)
             $table->string('stok'); // Item price
+            $table->string('berat'); // Item price
             $table->timestamps();
         });
     }

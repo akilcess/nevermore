@@ -28,6 +28,7 @@ class JenisBarangController extends Controller
     {
         $request->validate([
             'nama' => 'required|string|max:255',
+            'deskripsi' => 'required|string',
           
         ]);
 
@@ -36,6 +37,7 @@ class JenisBarangController extends Controller
         // Create pegawai
         JenisBarang::create([
             'nama' => $request->nama,
+            'deskripsi' => $request->deskripsi,
             
         ]);
 
@@ -55,6 +57,7 @@ class JenisBarangController extends Controller
     {
         $request->validate([
             'nama' => 'required|string|max:255',
+            'deskripsi' => 'required|string',
           
         ]);
 
@@ -66,6 +69,7 @@ class JenisBarangController extends Controller
         // Update pegawai
         $jenis->update([
             'nama' => $request->nama,
+            'deskripsi' => $request->deskripsi,
            
         ]);
 
