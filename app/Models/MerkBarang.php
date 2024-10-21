@@ -14,4 +14,8 @@ class MerkBarang extends Model
         'deskripsi',
        
     ];
+    public function barangs()
+    {
+        return $this->hasMany(Barang::class);
+    }
 }

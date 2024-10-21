@@ -41,6 +41,10 @@
 										<p>E-Shop
 										</p>
 									</div>
+								</div><div class="text-center">
+									<p>Belum punya akun? <a href="/register">Daftar Disini</a>
+									</p>
+								</div>
 								
 									<div class="login-separater text-center mb-4"> <span>MASUK MENGGUNAKAN USERNAME DAN PASSWORD</span>
 										<hr/>

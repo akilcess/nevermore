@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+	<link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
+	<!--plugins-->
+	<link href="assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<!-- loader-->
+	<link href="assets/css/pace.min.css" rel="stylesheet" />
+	<script src="assets/js/pace.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-extended.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
+	<link href="assets/css/icons.css" rel="stylesheet">
+	<!-- Theme Style CSS -->
+	<link rel="stylesheet" href="assets/css/dark-theme.css" />
+	<link rel="stylesheet" href="assets/css/semi-dark.css" />
+	<link rel="stylesheet" href="assets/css/header-colors.css" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+	<style>
+		body {
+			font-family: "Anton", sans-serif;
+			font-weight: 300;
+			font-style: normal;
+		}
+	</style>
+	<title>E-Shop</title>
+</head>
+
+<body>
+	<!--wrapper-->
+	<div class="wrapper">
+		<!--start header wrapper-->
+		<div class="header-wrapper">
+			<!--start header -->
+			<header>
+				<div class="topbar d-flex align-items-center">
+					<div class="container">
+						<nav class="navbar navbar-expand">
+							<div class="topbar-logo-header">
+								<div class="">
+									<h4 class="logo-text text-dark">E-Shop</h4>
+								</div>
+							</div>
+							<div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
+							<div class="search-bar flex-grow-1 d-none">
+								<div class="position-relative search-bar-box">
+									<input type="text" class="form-control search-control"
+										placeholder="Type to search...">
+									<span class="position-absolute top-50 search-show translate-middle-y"><i
+											class='bx bx-search'></i></span>
+									<span class="position-absolute top-50 search-close translate-middle-y"><i
+											class='bx bx-x'></i></span>
+								</div>
+							</div>
+							<div class="top-menu ms-auto d-flex align-items-center">
+								<ul class="navbar-nav align-items-center d-flex">
+									<li class="nav-item mobile-search-icon d-none">
+										<a class="nav-link" href="#">
+											<i class='bx bx-search mt-1'></i>
+										</a>
+									</li>
+
+									<li class="nav-item dropdown dropdown-large">
+										<a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
+											href="#" role="button" aria-expanded="false">
+											<span class="alert-count">7</span>
+											<i class='bx bx-shopping-bag'></i>
+										</a>
+										<div class="dropdown-menu dropdown-menu-end">
+											<div class="header-notifications-list"></div>
+										</div>
+									</li>
+
+									<li class="nav-item dropdown dropdown-large">
+										<div class="dropdown-menu dropdown-menu-end">
+											<div class="header-message-list"></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="user-box dropdown">
+								<!-- <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret"
+									href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<img src="assets/images/avatars/avatar-2.png" class="user-img" alt="user avatar">
+									<div class="user-info ps-3">
+										<p class="user-name mb-0">Pauline Seitz</p>
+										<p class="designattion mb-0">Web Designer</p>
+									</div>
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end">
+									<li><a class="dropdown-item" href="javascript:;"><i
+												class="bx bx-user"></i><span>Profile</span></a>
+									</li>
+									<li><a class="dropdown-item" href="javascript:;"><i
+												class='bx bx-store'></i><span>Pembelian</span></a>
+									</li>
+									<li>
+										<div class="dropdown-divider mb-0"></div>
+									</li>
+									<li><a class="dropdown-item" href="javascript:;"><i
+												class='bx bx-log-out-circle'></i><span>Logout</span></a>
+									</li>
+								</ul> -->
+
+								<!-- JIKA BELUM LOGIN -->
+								<div class="d-flex gap-3">
+									<button type="button"
+										class="btn btn-sm btn-outline-dark px-5 d-none d-md-inline">Login</button>
+									<button type="button"
+										class="btn btn-sm btn-dark px-5 d-none d-md-inline">Register</button>
+								</div>
+								<!-- JIKA BELUM LOGIN -->
+
+								<!-- Tombol yang akan muncul di mode mobile (disembunyikan di layar besar) -->
+								<div class="d-flex justify-content-center d-md-none mb-1">
+									<button type="button" class="btn btn-sm btn-dark">Login</button>
+								</div>
+							</div>
+
+						</nav>
+					</div>
+				</div>
+			</header>
+			<!--end header -->
+			<!--navigation-->
+			<div class="nav-container primary-menu">
+				<div class="mobile-topbar-header">
+					<div>
+						<h4 class="logo-text text-dark">E-Shop</h4>
+					</div>
+					<div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
+					</div>
+				</div>
+				<nav class="navbar navbar-expand-xl w-100">
+					<div class="container">
+						<ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
+							<li class="nav-item dropdown">
+								<a href="javascript:;" class="nav-link dropdown-toggle dropdown-toggle-nocaret"
+									data-bs-toggle="dropdown">
+									<div class="parent-icon">
+									</div>
+									<div class="menu-title">Dashboard</div>
+								</a>
+								<ul class="dropdown-menu">
+									<li> <a class="dropdown-item" href="index.html"><i
+												class="bx bx-right-arrow-alt"></i>Default</a>
+									</li>
+									<li> <a class="dropdown-item" href="index2.html"><i
+												class="bx bx-right-arrow-alt"></i>Alternate</a>
+									</li>
+									<li> <a class="dropdown-item" href="index3.html"><i
+												class="bx bx-right-arrow-alt"></i>Graphical</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a href="javascript:;" class="nav-link dropdown-toggle dropdown-toggle-nocaret"
+									data-bs-toggle="dropdown">
+									<div class="parent-icon">
+									</div>
+									<div class="menu-title">eCommerce</div>
+								</a>
+								<ul class="dropdown-menu">
+									<li> <a class="dropdown-item" href="ecommerce-products.html"><i
+												class="bx bx-right-arrow-alt"></i>Products</a>
+									</li>
+									<li> <a class="dropdown-item" href="ecommerce-products-details.html"><i
+												class="bx bx-right-arrow-alt"></i>Product Details</a>
+									</li>
+									<li> <a class="dropdown-item" href="ecommerce-add-new-products.html"><i
+												class="bx bx-right-arrow-alt"></i>Add New Products</a>
+									</li>
+									<li> <a class="dropdown-item" href="ecommerce-orders.html"><i
+												class="bx bx-right-arrow-alt"></i>Orders</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="widgets.html">
+									<div class="parent-icon">
+									</div>
+									<div class="menu-title">Widgets</div>
+								</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a href="javascript:;" class="nav-link dropdown-toggle dropdown-toggle-nocaret"
+									data-bs-toggle="dropdown">
+									<div class="parent-icon">
+									</div>
+									<div class="menu-title">Application</div>
+								</a>
+								<ul class="dropdown-menu">
+									<li> <a class="dropdown-item" href="app-emailbox.html"><i
+												class="bx bx-right-arrow-alt"></i>Email</a>
+									</li>
+									<li> <a class="dropdown-item" href="app-chat-box.html"><i
+												class="bx bx-right-arrow-alt"></i>Chat Box</a>
+									</li>
+									<li> <a class="dropdown-item" href="app-file-manager.html"><i
+												class="bx bx-right-arrow-alt"></i>File Manager</a>
+									</li>
+									<li> <a class="dropdown-item" href="app-contact-list.html"><i
+												class="bx bx-right-arrow-alt"></i>Contatcs</a>
+									</li>
+									<li> <a class="dropdown-item" href="app-to-do.html"><i
+												class="bx bx-right-arrow-alt"></i>Todo List</a>
+									</li>
+									<li> <a class="dropdown-item" href="app-invoice.html"><i
+												class="bx bx-right-arrow-alt"></i>Invoice</a>
+									</li>
+									<li> <a class="dropdown-item" href="app-fullcalender.html"><i
+												class="bx bx-right-arrow-alt"></i>Calendar</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<!--end navigation-->
+		</div>
+		<!--end header wrapper-->
+		<!--start page wrapper -->
+
+		<div class="page-wrapper">
+			<div class="page-content position-relative">
+				<div class="col-12 mb-3">
+					<h3>Nama Merk</h3>
+				</div>
+				<hr>
+				<div class="row row-cols-2 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 product-grid">
+					<div class="col">
+						<div class="card">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1l1xT8ELl9b4h2U6xcKFoKkE0Ep0DJHv3A&s"
+								class="card-img-top" alt="...">
+							<div class="card-body">
+								<h6 class="card-title cursor-pointer">Nest Shaped Chair</h6>
+								<div class="clearfix">
+									<p class="mb-0 float-end fw-bold"><span>$240</span></p>
+								</div>
+								<div class="d-flex align-items-center mt-3 fs-6">
+									<p class="mb-0 ms-auto">187 pcs</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Add more product cards as needed -->
+				</div>
+			</div>
+
+		</div>
+
+		<!--end page wrapper -->
+		<!--start overlay-->
+		<div class="overlay toggle-icon"></div>
+		<!--end overlay-->
+		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i
+				class='bx bxs-up-arrow-alt'></i></a>
+		<!--End Back To Top Button-->
+
+
+
+	</div>
+	<div class="container">
+		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+			<p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
+
+			<a href="/"
+				class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+					class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+					<path
+						d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+				</svg>
+			</a>
+
+			<ul class="nav col-md-4 justify-content-end">
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+			</ul>
+		</footer>
+	</div>
+
+	<!--end wrapper-->
+	<!-- Bootstrap JS -->
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<!--plugins-->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+	<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<script src="assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
+	<script src="assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+	<script src="assets/plugins/chartjs/js/Chart.min.js"></script>
+	<script src="assets/plugins/chartjs/js/Chart.extension.js"></script>
+	<script src="assets/js/index.js"></script>
+	<!--app JS-->
+	<script src="assets/js/app.js"></script>
+</body>
+
+</html>

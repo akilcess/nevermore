@@ -84,7 +84,7 @@
                                             {{ $barang->stok }}
                                         </td>
                                         <td>
-                                            {{ $barang->berat }} Kg
+                                            {{ $barang->berat }} Gram
                                         </td>
                                         <td>
                                             <a href="{{ route('barang.edit', $barang->id) }}"

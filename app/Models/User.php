@@ -46,5 +46,12 @@ class User extends Authenticatable
     ];
 
 
+    public function detailuser()
+    {
+        return $this->hasOne(RegisterUser::class, 'user_id');
+    }
+
+
+
 
 }

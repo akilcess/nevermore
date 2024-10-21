@@ -92,7 +92,7 @@
                                 <!-- berat -->
                                 <div class="col-md-6">
                                     <label for="berat" class="form-label">Berat</label>
-                                    <span class="text-danger">*satuan kilo (jika 500gram gunakan 0.5)</span>
+                                    <span class="text-danger">*satuan gram (jika 500gram gunakan 500)</span>
                                     <input type="number" class="form-control" id="berat" name="berat" step="0.01" min="0" required>
                                 </div>
                                 
