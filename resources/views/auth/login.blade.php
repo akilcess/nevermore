@@ -37,8 +37,8 @@
 							<div class="card-body">
 								<div class="border p-4 rounded">
 									<div class="text-center">
-										<h3 class="">E-Shop</h3>
-										<p>E-Shop
+										<h3 class="">Nevermore</h3>
+										<p>Nevermore
 										</p>
 									</div>
 								</div><div class="text-center">
