@@ -3,7 +3,7 @@
         <div class="container">
             <nav class="navbar navbar-expand">
                 <div class="topbar-logo-header">
-                    <h4 class="logo-text text-dark">E-Shop</h4>
+                    <h4 class="logo-text text-dark">Nevermore</h4>
                 </div>
                 <div class="mobile-toggle-menu"><i class='bx bx-menu'></i></div>
 

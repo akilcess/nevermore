@@ -37,7 +37,7 @@
             font-style: normal;
         }
     </style>
-    <title>E-Shop</title>
+    <title>Nevermore</title>
 </head>
 
 <body>
