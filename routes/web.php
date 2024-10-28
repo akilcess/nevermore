@@ -25,8 +25,10 @@ use App\Http\Controllers\{
     RegisterUserController,
     WilayahController,
     CheckoutController,
+    HandleLaporanController,
     ProsesPenjualanController,
-    WebPesananController
+    WebPesananController,
+    ManageCustomerController
 };
 
 
@@ -100,6 +102,14 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::get('/konfirm-request-stok', [KonfirmStokController::class, 'index'])->name('konfirm_request_stok.index');
     Route::get('/konfirm-request-stok/edit/{id}', [KonfirmStokController::class, 'edit'])->name('konfirm_request_stok.edit');
     Route::put('/konfirm-request-stok/updateStatus/{id}', [KonfirmStokController::class, 'updateStatus'])->name('konfirm_request_stok.update');
+
+
+    Route::get('/laporan-keseluruhan', [HandleLaporanController::class, 'allpenjualan'])->name('allpenjualan.index');
+    Route::get('/laporan-stok', [HandleLaporanController::class, 'allstok'])->name('allstok.index');
+    Route::get('/laporan-topsold', [HandleLaporanController::class, 'palingseringdibeli'])->name('topsold.index');
+
+    Route::get('/customer', [ManageCustomerController::class, 'index'])->name('admin.users.index');
+    Route::delete('/customer/delete/{registerUserId}', [ManageCustomerController::class, 'delete'])->name('admin.users.delete');
 });
 
 
@@ -133,7 +143,7 @@ Route::group(['middleware' => ['role:pegawai']], function () {
 // PENGGUNA
 
 Route::get('/', [WebIndexController::class, 'index'])->name('landing.index');
-Route::get('/semua-produk', [WebSemuaProdukController::class, 'index'])->name('semuaproduk.index');
+Route::get('/semua-produk', [WebSemuaProdukController::class, 'index'])->name('semua.produk');
 
 Route::get('/produk/jenis/{jenis_barang_id}', [WebJenisProdukController::class, 'getBarangByJenis'])->name('produk.jenis');
 Route::get('/produk/merk/{merk_barang_id}', [WebMerkProdukController::class, 'getBarangByMerk'])->name('produk.merk');
@@ -159,6 +169,5 @@ Route::group(['middleware' => ['role:user']], function () {
 
     Route::get('/pesanansaya', [WebPesananController::class, 'index'])->name('pesanansaya');
     Route::post('/pesanan/selesai/{id}', [WebPesananController::class, 'markAsCompleted'])->name('pesanan.selesai');
-
 });
 // PENGGUNA

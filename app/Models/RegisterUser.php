@@ -20,13 +20,14 @@ class RegisterUser extends Model
     ];
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function province()
     {
         return $this->belongsTo(Provinsi::class);
     }
+
     public function city()
     {
         return $this->belongsTo(Kabupaten::class);
